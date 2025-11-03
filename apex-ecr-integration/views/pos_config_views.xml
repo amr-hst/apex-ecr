@@ -6,9 +6,8 @@
     <field name="arch" type="xml">
       <xpath expr="//group[@name='payments']" position="after">
         <group string="Apex ECR Integration">
-          <field name="apex_tid"/>
-          <field name="apex_mid"/>
-
+          <field name="tid"/>
+          <field name="mid"/>
          </group>
       </xpath>
     </field>

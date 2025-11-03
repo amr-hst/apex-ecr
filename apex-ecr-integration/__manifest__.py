@@ -7,7 +7,7 @@
     'author': 'Amr Mahadeen',
     'company': 'Hamilton Smart Technologies',
     'maintainer': 'Amr Mahadeen',
-    'depends': ['base', 'point_of_sail'],
+    'depends': ['base', 'point_of_sale'],
     'data': [
     ],
     'license':'LGPL-3',
