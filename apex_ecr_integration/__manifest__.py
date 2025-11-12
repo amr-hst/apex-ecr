@@ -3,7 +3,7 @@
     'version': '18.0.1.0.0',
     'category': 'Point of Sale',
     'summary': 'Integrate Odoo POS with Apex ECR terminals',
-    'author': 'HST - Mohammad Amayreh',
+    'author': 'HST Development Team',
     'license': 'LGPL-3',
     'depends': ['point_of_sale'],
     'data': [
