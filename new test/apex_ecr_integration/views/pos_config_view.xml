@@ -20,9 +20,6 @@
                            password="True"
                            modifiers='{"invisible": [["apex_ecr_enabled", "=", False]]}'/>
 
-                    <!-- New Test Mode checkbox -->
-                    <field name="apex_ecr_test_mode"
-                           modifiers='{"invisible": [["apex_ecr_enabled", "=", False]]}'/>
                 </group>
             </xpath>
 

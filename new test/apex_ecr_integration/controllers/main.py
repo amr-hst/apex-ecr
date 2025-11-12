@@ -37,25 +37,8 @@ class ApexECRController(http.Controller):
         merchant_key = (pos_config.apex_secure_key or '').strip()
         mid = (pos_config.apex_mid or '').strip()
         tid = (pos_config.apex_tid or '').strip()
-        test_mode = getattr(pos_config, "apex_ecr_test_mode", False)
         currency_code = "400"  # JOD
 
-        # 2️ TEST MODE — always simulate approval
-        if test_mode:
-            _logger.info("[ApexECR][TEST] Simulating approved transaction for amount %.3f", float(amount))
-            time.sleep(1.0)
-            return {
-                'success': True,
-                'message': (
-                    " Transaction Approved (Test Mode)\n"
-                    f"Amount: {float(amount):.3f} JOD\n"
-                    f"Auth Code: 999999\n"
-                    f"Card: ****1234\n"
-                    f"Message: Simulated Approval (No ECR Call)"
-                )
-            }
-
-        # 3️ LIVE MODE — send real SOAP call
         url = "https://188.247.84.45:6610/EcrWebInterface/EcrComInterface.svc"
         headers = {
             "Content-Type": "text/xml; charset=utf-8",
